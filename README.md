@@ -51,14 +51,16 @@ For each sample, indexed from $i = 1$ to $N_s$, the data generation process foll
 1. **Threshold sampling:** An admissible hysteresis threshold vector is generated within the admissible threshold domain:
 
    ```math
-   \mathbf{x}_i = (F_1, F_2, F_3, F_4, R_2, R_3, R_4, R_5).    ```
+   \mathbf{x}_i = (F_1, F_2, F_3, F_4, R_2, R_3, R_4, R_5).  
 
 2. **Stationary analysis:** The stationary distribution of the continuous-time Markov chain associated with this threshold configuration is computed numerically using a truncation test.
 
 3. **Performance evaluation:** The corresponding output vector is computed from the stationary distribution:
 
-   ```math
-   \mathbf{y}_i = \left(\mathbb{E}[N], \mathbb{E}[S_a]\right),    ```
+  ```math
+\mathbf{y}_i = \left(\mathbb{E}[N], \mathbb{E}[S_a]\right),
+```
+
 
    where:
    - $\mathbb{E}[N]$ is the mean number of customers in the system.
@@ -67,7 +69,7 @@ For each sample, indexed from $i = 1$ to $N_s$, the data generation process foll
 Each input-output pair is added to the dataset:
 
 ```math
-\mathcal{D} = \left\{(\mathbf{x}_i, \mathbf{y}_i)\right\}_\){i=1}^{N_s}.
+\mathcal{D} = \left\{(\mathbf{x}_i, \mathbf{y}_i)\right\}_{i=1}^{N_s}.
 ```
 
 ## Data Format
@@ -84,5 +86,9 @@ The columns are organized as follows:
 | `ESa` | Mean number of active servers ($\mathbb{E}[S_a]$). |
 
 ## Note on indexing
-The CSV files use shifted indexing for the deactivation thresholds. The threshold denoted by $R_i$ in the article is named `R_(i+1)` in the CSV files.
+The CSV files use shifted indexing for the deactivation thresholds. The threshold denoted by $R_i$ in the article is named $R_{(i+1)}$ in the CSV files.
+## License
+
+This repository is licensed under the MIT License.
+See the LICENSE file for details.
 
