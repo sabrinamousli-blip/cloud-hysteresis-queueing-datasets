@@ -13,7 +13,7 @@ The datasets are used to train, validate, and test a multilayer perceptron surro
 The datasets were generated with $K = 5$ servers (and fixed activation/deactivation rates $\alpha = 0.01$, $\beta = 0.1$). Within each dataset, the threshold configurations vary while the remaining system parameters are held fixed.
 
 - `mlp_dataset_EN_ESa11.csv`: Contains 100,000 observations for $\lambda = 1$ and $\mu = 1$.
-- `mlp_dataset_EN_ESa21.csv`: Contains 79,201 observations for $\lambda = 2$ and $\mu = 1$.
+- `mlp_dataset_EN_ESa21.csv`: Contains 79,200 observations for $\lambda = 2$ and $\mu = 1$.
 - `mlp_dataset_EN_ESa22.csv`: Contains 100,000 observations for $\lambda = 2$ and $\mu = 2$, data generation stopped after 24 hours, before reaching the intended 100,000 observations.
 
 ## Threshold Admissibility
