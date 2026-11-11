@@ -21,8 +21,8 @@ The datasets were generated with $K = 5$ servers (and fixed activation/deactivat
 Each threshold configuration consists of two vectors of positive integers:
 
 ```math
-F \(= (F_1, F_2, \dots, F_{K-1}), \qquad\)
-R = (\(R_2, R_3, \dots,\) R_K),
+F = (F_1, F_2, \dots, F_{K-1}), \qquad)
+R = (R_2, R_3, \dots, R_K),
 ```
 
 where $F$ contains the activation thresholds and $R$ contains the deactivation thresholds.
@@ -31,17 +31,17 @@ where $F$ contains the activation thresholds and $R$ contains the deactivation t
 An admissible configuration satisfies the following constraints:
 
 ```math
-\(F_1 < F_2 < \dots <\) F_{K-1},
+F_1 < F_2 < \dots < F_{K-1},
 ```
 
 ```math
-\(R_2 < R_3 < \dots <\) R_K,
+R_2 < R_3 < \dots < R_K,
 ```
 
 and
 
 ```math
-0 < R_{i+1} < F_i\(, \qquad i = 1, \dots,\) K-1.
+0 < R_{i+1} < F_i, \qquad i = 1, \dots, K-1.
 ```
 
 ## Data Generation Methodology
@@ -51,14 +51,14 @@ For each sample, indexed from $i = 1$ to $N_s$, the data generation process foll
 1. **Threshold sampling:** An admissible hysteresis threshold vector is generated within the admissible threshold domain:
 
    ```math
-   \(\mathbf{x}_i = (F_1, F_2, F_3, F_4, R_2, R_3, R_4, R_5).    ```
+   \mathbf{x}_i = (F_1, F_2, F_3, F_4, R_2, R_3, R_4, R_5).    ```
 
 2. **Stationary analysis:** The stationary distribution of the continuous-time Markov chain associated with this threshold configuration is computed numerically using a truncation test.
 
 3. **Performance evaluation:** The corresponding output vector is computed from the stationary distribution:
 
    ```math
-   \(\mathbf{y}_i = \left(\mathbb{E}[N], \mathbb{E}[S_a]\right),    ```
+   \mathbf{y}_i = \left(\mathbb{E}[N], \mathbb{E}[S_a]\right),    ```
 
    where:
    - $\mathbb{E}[N]$ is the mean number of customers in the system.
@@ -67,7 +67,7 @@ For each sample, indexed from $i = 1$ to $N_s$, the data generation process foll
 Each input-output pair is added to the dataset:
 
 ```math
-\(\mathcal{D} = \left\{(\mathbf{x}_i, \mathbf{y}_i)\right\}_\){i=1}^{N_s}.
+\mathcal{D} = \left\{(\mathbf{x}_i, \mathbf{y}_i)\right\}_\){i=1}^{N_s}.
 ```
 
 ## Data Format
